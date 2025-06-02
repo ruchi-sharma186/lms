@@ -29,6 +29,16 @@ let members = [
         type: "student",
         booksOut: 1,
         joinDate: "2025-03-10"
+    },
+     {
+        id: 4,
+        name: "Ruchi Johnson",
+        email: "Ruchi@example.com",
+        phone: "555-0103",
+        address: "789 Pine Rd, Nowhere",
+        type: "student",
+        booksOut: 1,
+        joinDate: "2025-03-10"
     }
 ];
 
