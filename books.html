@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books | LibroMind</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo"><i class="fas fa-book-open"></i> LibroMind</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="books.html" class="active">Books</a></li>
+                    <li><a href="members.html">Members</a></li>
+                    <li><a href="transactions.html">Transactions</a></li>
+                    <li><a href="reports.html">Reports</a></li>
+                    <li><a href="login.html" class="btn-login">Logout</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="books-header">
+            <h1>Book Collection</h1>
+            <div class="search-filter">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search books...">
+                    <button id="searchBtn"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="filter">
+                    <select id="categoryFilter">
+                        <option value="">All Categories</option>
+                        <option value="fiction">Fiction</option>
+                        <option value="non-fiction">Non-Fiction</option>
+                        <option value="science">Science</option>
+                        <option value="history">History</option>
+                    </select>
+                </div>
+                <button class="btn-primary" id="addBookBtn">Add Book</button>
+            </div>
+        </section>
+
+        <section class="books-grid" id="booksContainer">
+            <!-- Books will be loaded here dynamically -->
+        </section>
+
+        <!-- Add Book Modal -->
+        <div class="modal" id="addBookModal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Add New Book</h2>
+                <form id="addBookForm">
+                    <div class="form-group">
+                        <label for="bookTitle">Title</label>
+                        <input type="text" id="bookTitle" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bookAuthor">Author</label>
+                        <input type="text" id="bookAuthor" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bookCategory">Category</label>
+                        <select id="bookCategory" required>
+                            <option value="fiction">Fiction</option>
+                            <option value="non-fiction">Non-Fiction</option>
+                            <option value="science">Science</option>
+                            <option value="history">History</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="bookISBN">ISBN</label>
+                        <input type="text" id="bookISBN" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bookCopies">Copies Available</label>
+                        <input type="number" id="bookCopies" min="1" value="1" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Add Book</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 LibroMind Library Management System</p>
+        </div>
+    </footer>
+
+    <script src="books.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

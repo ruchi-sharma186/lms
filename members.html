@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Members | LibroMind</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo"><i class="fas fa-book-open"></i> LibroMind</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="books.html">Books</a></li>
+                    <li><a href="members.html" class="active">Members</a></li>
+                    <li><a href="transactions.html">Transactions</a></li>
+                    <li><a href="reports.html">Reports</a></li>
+                    <li><a href="login.html" class="btn-login">Logout</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="members-header">
+            <h1>Member Management</h1>
+            <div class="member-actions">
+                <div class="search-box">
+                    <input type="text" id="memberSearch" placeholder="Search members...">
+                    <button id="memberSearchBtn"><i class="fas fa-search"></i></button>
+                </div>
+                <button class="btn-primary" id="addMemberBtn">Add Member</button>
+            </div>
+        </section>
+
+        <section class="members-table">
+            <table id="membersTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Membership</th>
+                        <th>Books Out</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Members will be loaded here dynamically -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Add Member Modal -->
+        <div class="modal" id="addMemberModal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Add New Member</h2>
+                <form id="addMemberForm">
+                    <div class="form-group">
+                        <label for="memberName">Full Name</label>
+                        <input type="text" id="memberName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="memberEmail">Email</label>
+                        <input type="email" id="memberEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="memberPhone">Phone</label>
+                        <input type="tel" id="memberPhone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="memberAddress">Address</label>
+                        <textarea id="memberAddress" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="memberType">Membership Type</label>
+                        <select id="memberType" required>
+                            <option value="regular">Regular</option>
+                            <option value="premium">Premium</option>
+                            <option value="student">Student</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-primary">Add Member</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 LibroMind Library Management System</p>
+        </div>
+    </footer>
+
+    <script src="members.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
